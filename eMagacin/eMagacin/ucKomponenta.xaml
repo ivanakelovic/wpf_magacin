@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="eMagacin.ucKomponenta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="160" Background="DarkGreen" FontFamily="Consolas" Margin="5" MouseDoubleClick="UserControl_MouseDoubleClick">
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Name="mniIzvjestajSve" Header="Izvještaj - Stanje magacina" Click="mniIzvjestajSve_Click"></MenuItem>
+            <MenuItem Name="mniIzvjestajDostupne" Header="Izvještaj - Komponente koje imaju na stanju" Click="mniIzvjestajDostupne_Click"></MenuItem>
+            <MenuItem Name="mniIzvjestajNedostupne" Header="Izvještaj - Komponente koje nemaju na stanju" Click="mniIzvjestajNedostupne_Click"></MenuItem>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Height="50" HorizontalAlignment="Center" Name="imgSlika" Stretch="Fill" VerticalAlignment="Center" Width="100"  Source="/eMagacin;component/Images/otpornici.jpg" />
+        <Label Content="24" Grid.Column="1" HorizontalAlignment="Right" Name="lblLadicaBroj" VerticalAlignment="Top" FontSize="22" Foreground="White" />
+        <Label Content="Otoprnici 1k1" Grid.Row="1" Height="28" HorizontalAlignment="Center" Name="lblSadrzaj" VerticalAlignment="Center" Grid.ColumnSpan="2"  Foreground="White"/>
+        <Label Content="15" Grid.Column="1"  HorizontalAlignment="Right" Name="lblKolicina" VerticalAlignment="Bottom" Foreground="White" />
+    </Grid>
+</UserControl>
